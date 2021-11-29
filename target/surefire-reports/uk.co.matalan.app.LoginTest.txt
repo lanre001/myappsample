@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: uk.co.matalan.app.LoginTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 48.367 s <<< FAILURE! - in uk.co.matalan.app.LoginTest
+runnerTest(uk.co.matalan.app.LoginTest)  Time elapsed: 47.445 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'DESKTOP-1F6TC7K', ip: '192.168.0.29', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--incognito], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--incognito], extensions: []}}}]
+	at uk.co.matalan.app.LoginTest.preRun(LoginTest.java:28)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:63889
+	at uk.co.matalan.app.LoginTest.preRun(LoginTest.java:28)
+Caused by: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:63889
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:63889
+Caused by: java.net.ConnectException: Connection refused: no further information
+
+runnerTest(uk.co.matalan.app.LoginTest)  Time elapsed: 47.57 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at uk.co.matalan.app.LoginTest.postRun(LoginTest.java:36)
+

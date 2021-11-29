@@ -1,8 +1,7 @@
-package uk.co.matalan.app;
+package page;
 
 import org.openqa.selenium.WebDriver;
-
-import java.sql.Driver;
+import page.BasePage;
 
 public class HomePage extends BasePage {
 

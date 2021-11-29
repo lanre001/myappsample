@@ -1,39 +1,33 @@
 package uk.co.matalan.app;
 
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
-import java.sql.Driver;
-import java.util.Locale;
+import page.BasePage;
+import page.LoginValidationPage;
+import page.MyAccountPage;
 
 public class LoginTest {
 
 
     private WebDriver driver;
+    private BrowerFactory browerFactory;
+
+
     @Before
     public void preRun(){
 
-    String BaseUrl = "https://www.matalan.co.uk/";
-    String chromePath = "C:\\Users\\User\\IdeaProjects\\deal\\src\\WebtextMata\\.idea\\driver\\chrome\\chromedriver.exe";
-    System.setProperty("webdriver.chrome.driver",chromePath);
-    ChromeOptions options = new ChromeOptions();
-    options.addArguments("--incognito");
-    this.driver = new ChromeDriver(options);
-    driver.manage().window().maximize();
-    driver.navigate().to(BaseUrl);
+        this.browerFactory = new BrowerFactory ();
+        this.driver = browerFactory.browerActivation ();
+
+
 
     }
 
     @After
     public void postRun(){
-        driver.quit();
+        browerFactory.browerDeactivation ();
 
     }
     @Test
@@ -42,7 +36,7 @@ public class LoginTest {
         String password  = "Wronskian263";
 
 
-        BasePage basePage = new BasePage(driver);
+      BasePage basePage = new BasePage(driver);
         basePage.myAccountLoginPage();
         MyAccountPage myAccountPage = new MyAccountPage ( driver );
         myAccountPage.login(username, password);
@@ -54,7 +48,15 @@ public class LoginTest {
         System.out.println (Title);
 
             }
-        }
+
+
+
+
+
+
+}
+
+
 
 
 
