@@ -8,6 +8,8 @@ import page.BasePage;
 import page.LoginValidationPage;
 import page.MyAccountPage;
 
+
+
 public class LoginTest {
 
 
@@ -30,7 +32,7 @@ public class LoginTest {
         browerFactory.browerDeactivation ();
 
     }
-    @Test
+    @Test(timeout = 100000)
     public void runnerTest(){
         String username = "rashsofi@gmail.com";
         String password  = "Wronskian263";
